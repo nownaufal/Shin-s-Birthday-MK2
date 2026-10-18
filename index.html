@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fffdeb">
+<title>Happy Birthday, My Dearest, Shinta ! 💛</title>
+<style>
+  :root { --yellow:#fcd96a; --deep:#8c7625; --cream:#fffeee; --ink:#544c33; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    margin:0; color:var(--ink); font-family:Georgia,"Times New Roman",serif;
+    background:radial-gradient(circle at 10% 5%,#fff 0,#fffdf0 30%,#fef2c8 62%,#f5fdf7 100%);
+    overflow-x:hidden;
+  }
+  button { font:inherit; cursor:pointer; }
+  .wrap { width:min(900px,92%); margin:auto; }
+  .hero { min-height:100svh; display:grid; place-items:center; text-align:center; padding:34px 0; position:relative; }
+  .panel { width:min(650px,100%); padding:clamp(24px,6vw,54px); border:1px solid #ffffffc9; border-radius:28px;
+    background:#ffffffb8; box-shadow:0 18px 60px #b89b3320; backdrop-filter:blur(8px); }
+  .eyebrow { text-transform:uppercase; letter-spacing:.2em; font:700 .75rem Arial,sans-serif; color:var(--deep); }
+  h1 { font-size:clamp(2.4rem,9vw,5rem); line-height:1.02; margin:14px 0; color:var(--deep); }
+  h2 { font-size:clamp(1.8rem,6vw,3rem); color:var(--deep); margin:0 0 12px; }
+  p { line-height:1.7; }
+  .subtitle { font-size:1.08rem; max-width:440px; margin:0 auto 24px; }
+  .heart { font-size:2.7rem; display:inline-block; animation:pulse 1.4s infinite; }
+  @keyframes pulse { 50% { transform:scale(1.18); } }
+  .btn { border:0; border-radius:999px; padding:14px 22px; background:var(--yellow); color:#fff; font:700 1rem Arial,sans-serif;
+    box-shadow:0 8px 22px #f4cc4955; transition:transform .2s; }
+  .btn:hover { transform:translateY(-2px); }
+  .btn.secondary { background:#fff; color:var(--deep); border:1px solid #fce895; box-shadow:none; }
+  .section { padding:70px 0; text-align:center; }
+  .section-intro { max-width:570px; margin:0 auto 28px; }
+  .gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; text-align:left; }
+  .memory { background:#fff; padding:10px; border-radius:18px; box-shadow:0 8px 24px #7c681914; transform:rotate(var(--tilt,0deg)); }
+  .memory img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; border-radius:12px; background:#fef5cc; }
+  .memory p { margin:10px 5px 4px; font-size:.98rem; }
+  .letter { text-align:left; max-width:650px; margin:auto; padding:clamp(22px,5vw,42px); background:#fffef9; border-radius:8px 24px 8px 24px;
+    box-shadow:0 12px 36px #7c681915; border:1px solid #fae7a0; }
+  #letterText { white-space:pre-line; line-height:1.9; min-height:140px; }
+  .cake { font-size:clamp(5rem,20vw,9rem); line-height:1.3; filter:drop-shadow(0 10px 10px #b89b3320); }
+  .hidden { display:none !important; }
+  .music { position:fixed; z-index:5; right:14px; bottom:14px; }
+  footer { text-align:center; padding:25px 12px 40px; color:#968037; font-size:.9rem; }
+  .float-heart { position:fixed; z-index:10; bottom:-30px; pointer-events:none; animation:rise 4s linear forwards; }
+  @keyframes rise { to { transform:translateY(-110vh) rotate(25deg); opacity:0; } }
+  .confetti { position:fixed; z-index:10; top:-20px; pointer-events:none; animation:fall 3.2s linear forwards; }
+  @keyframes fall { to { transform:translateY(110vh) rotate(720deg); opacity:.2; } }
+  @media(min-width:650px) { .gallery { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+  @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; scroll-behavior:auto !important; } }
+</style>
+</head>
+<body>
+<button class="btn music" id="musicButton" type="button" aria-label="Play background music">♫ Play music</button>
+<audio id="bgMusic" loop preload="none" src="music.mp3"></audio>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="panel">
+      <div class="heart" aria-hidden="true">💛</div>
+      <h1>Happy Birthday,<br><span id="partnerName">My Love</span>!</h1>
+      <p class="subtitle">Coba buka yaaaa....</p>
+      <button class="btn" id="openButton" type="button">klik iniiiii ✨</button>
+      <p style="font-size:.85rem;margin-bottom:0">klik yang atassss.</p>
+    </div>
+  </div>
+</header>
+
+<main id="surprise" class="hidden">
+  <section class="section wrap">
+    <div class="eyebrow">Little moments, big feelings</div>
+    <h2>Foto-foto Favorit ! 🌻</h2>
+    <p class="section-intro">Beberapa foto-foto favorit. masih banyak sih...,.</p>
+    <div class="gallery">
+      <article class="memory" style="--tilt:-1deg"><img src="photo1.jpg" alt="Our first memory"><p>💌 jadi kita apa?? tolong jangan nanya di motorr 😅 to</p></article>
+      <article class="memory" style="--tilt:1deg"><img src="photo2.jpg" alt="A favorite photo together"><p>🌻 Foto favorit lagi, ini bahagia sekali waktu itu.</p></article>
+      <article class="memory" style="--tilt:-1deg"><img src="photo3.jpg" alt="Another favorite memory"><p>✨ 2nd date? sayang tidak foto waktu pertama kali jalan</p></article>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <div class="eyebrow">sekali lagi</div>
+    <h2>Selamat Ulang Tahun! 💌</h2>
+    <div class="letter">
+      <p>To my dearest!,</p>
+      <p id="letterText"></p>
+      <p style="margin-bottom:0">Always with love,<br><strong id="yourName">Your person 💛</strong></p>
+    </div>
+  </section>
+
+  <section class="section wrap" id="final">
+    <div class="eyebrow">One last little wish</div>
+    <h2>Make a birthday wish 🎂</h2>
+    <p class="section-intro">Close your eyes for a moment, make a wish, then tap the cake.</p>
+    <button id="cakeButton" class="btn secondary" type="button" aria-label="Make a birthday wish">
+      <div class="cake">🎂</div>
+      Tap for birthday magic ✨
+    </button>
+    <p id="finalMessage" class="hidden" style="font-size:1.25rem;max-width:560px;margin:26px auto 0">
+      I hope this year brings you so much happiness, peace, laughter, and love. No matter how many birthdays come, I'm grateful I get to celebrate you. Happy birthday, my love! 💛
+    </p>
+  </section>
+</main>
+<footer>Made with all my heart 💛</footer>
+
+<script>
+  // PERSONALIZE THESE THREE ITEMS before sharing your website.
+  const partnerName = "My Dearest, Shinta"; // Change this to your partner’s name
+  const yourName = "Naufal 💛"; // Change this to your name
+  const loveLetter = `Selamat ulang tahun yoooo..... yang ke 30!!!!\n\nsemoga dimurahkan selalu rezekinya, nikmat kesehatan, nikmat umur. semoga apa yang diinginkan di tahun ini, yang tinggal beberapa bulan lagi tercapai. semoga bisa tumbuh bersama, selalu semoga selalu bijak, jadi pribadi yang lebih baik dari yang sebelumnya. With Age Comes Wisdom.\n\njangan sedih karena udah masuk 30 sendiri, sebentar lagi aku 30 juga kok.. hehe,.. santuyyy.\n\nsekali lagi,sekali lagi.. selamat ulang tahun, happy birthday!! semoga selalu bahagia, selamanya.. 💛`;
+
+  document.getElementById("partnerName").textContent = partnerName;
+  document.getElementById("yourName").textContent = yourName;
+  const openButton = document.getElementById("openButton");
+  const surprise = document.getElementById("surprise");
+  const letterText = document.getElementById("letterText");
+  let letterStarted = false;
+
+  function typeLetter() {
+    if (letterStarted) return;
+    letterStarted = true;
+    let i = 0;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) { letterText.textContent = loveLetter; return; }
+    const timer = setInterval(() => {
+      letterText.textContent += loveLetter.charAt(i);
+      i++;
+      if (i >= loveLetter.length) clearInterval(timer);
+    }, 28);
+  }
+
+  openButton.addEventListener("click", () => {
+    surprise.classList.remove("hidden");
+    openButton.textContent = "Buka 💛";
+    openButton.disabled = true;
+    burstHearts(16);
+    setTimeout(typeLetter, 500);
+    document.getElementById("surprise").scrollIntoView({behavior:"smooth"});
+  });
+
+  const audio = document.getElementById("bgMusic");
+  const musicButton = document.getElementById("musicButton");
+  musicButton.addEventListener("click", async () => {
+    if (audio.paused) {
+      try { await audio.play(); musicButton.textContent = "♫ Pause music"; }
+      catch { alert("Add a music file named music.mp3 to the same website folder, then try again."); }
+    } else { audio.pause(); musicButton.textContent = "♫ Play music"; }
+  });
+  audio.addEventListener("ended", () => musicButton.textContent = "♫ Play music");
+
+  function burstHearts(count) {
+    for (let i=0; i<count; i++) {
+      const el = document.createElement("span");
+      el.className = "float-heart";
+      el.textContent = ["💛","🌼","🌻","✨"][Math.floor(Math.random()*4)];
+      el.style.left = Math.random()*100 + "vw";
+      el.style.fontSize = (18 + Math.random()*22) + "px";
+      el.style.animationDuration = (3 + Math.random()*2) + "s";
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 5200);
+    }
+  }
+  function confettiBurst() {
+    for (let i=0; i<75; i++) {
+      const el = document.createElement("span");
+      el.className = "confetti";
+      el.textContent = ["💛","✨","🎉","🌼","★"][Math.floor(Math.random()*5)];
+      el.style.left = Math.random()*100 + "vw";
+      el.style.fontSize = (12 + Math.random()*18) + "px";
+      el.style.animationDuration = (2 + Math.random()*2) + "s";
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 4500);
+    }
+  }
+  document.getElementById("cakeButton").addEventListener("click", () => {
+    document.getElementById("finalMessage").classList.remove("hidden");
+    document.getElementById("cakeButton").querySelector(".cake").textContent = "🕯️🎂💨";
+    confettiBurst();
+    burstHearts(18);
+  });
+</script>
+</body>
+</html>
