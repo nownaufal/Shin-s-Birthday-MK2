@@ -137,6 +137,10 @@
     burstHearts(16);
     setTimeout(typeLetter, 500);
     document.getElementById("surprise").scrollIntoView({behavior:"smooth"});
+    
+    // Autoplay music trigger
+    audio.play(); 
+    musicButton.textContent = "♫ Pause music";
   });
 
   const audio = document.getElementById("bgMusic");
